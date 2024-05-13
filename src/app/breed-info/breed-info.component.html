@@ -1,0 +1,17 @@
+<div class = "card" *ngFor="let breed of breeds">
+    
+    <section class = "card-info">
+        <img class="image" *ngFor="let image of catData" [src]="image.url" alt="Cat Image">
+        <h1>{{breed.name}}</h1>
+            <p>{{breed.description}}</p>
+            <p>Temperament : {{breed.temperament}}</p>
+            <p>Origin : {{breed.origin}}</p>
+    </section>
+
+</div>
+<div *ngIf="selectedBreed">
+    <!-- Afficher les informations de la race sélectionnée ici -->
+    <h2>Informations sur la race {{ selectedBreed }}</h2>
+    
+  </div>
+  

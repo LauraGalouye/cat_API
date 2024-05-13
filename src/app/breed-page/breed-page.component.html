@@ -1,0 +1,7 @@
+
+<app-filter (breedSelected)="handleBreedSelected($event)"></app-filter>
+<form action="">
+    <input type="text" [value]="selectedBreed">
+</form>
+<app-breed-info [selectedBreed]="selectedBreed"></app-breed-info>
+

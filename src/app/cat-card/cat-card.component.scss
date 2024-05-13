@@ -1,0 +1,35 @@
+@import '../app.component.scss';
+
+
+.card{
+    margin : 5px;
+    padding: 11px;
+    display: flex;
+    background-color: $color-secondary;
+    
+    
+    @include small{
+        width : 80vw;
+        
+    }
+    
+
+}
+
+.image{
+    
+    @include small{
+        width: 100%;
+        height: 280px;
+    }
+   
+}
+
+.card-button{
+    display : block;
+}
+
+.card-content{
+    font-style: italic;
+    color : $color-black;
+}

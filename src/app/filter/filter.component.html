@@ -1,0 +1,8 @@
+<div>
+
+    <select name="breedSelect" id="breedSelect" (change)="handleBreedChange($event)">
+        <option value="">All breeds</option>
+        <option *ngFor="let breed of filter" [value]="breed.name">{{breed.name}}</option>
+    </select>
+
+</div>

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+$color-black: #161616;
+$color-secondary: #fbfbff;
+$fill-color-default: #ffffff;
+$fill-color-hover: #ff6600;
+$color-text: #ffffff;
+$size: 170px; // (Fully responsive)
+
+@mixin small {
+	@media (max-width: 576px) { @content; }
+  }
+  @mixin medium{
+	@media (min-width: 768px) { @content; }
+  }
+  @mixin large {
+	@media (min-width: 992px) { @content; }
+  }
+  @mixin extra-large {
+	@media (min-width: 1200px) { @content; }
+  }
+  @mixin extra-extra-large {
+	@media (min-width: 1400px) { @content; }
+  }
+
+
+:host {
+  display: block;
+  background-color: $color-black;
+  color: white;
+  padding: 1rem;
+  height: 100vh;
+}
+
+.nav-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.nav-item {
+  padding: 0.5rem;
+  cursor: pointer;
+  color: $fill-color-default;
+  text-decoration: none;
+  position: relative;
+  
+
+  &:hover,
+  &.focus {
+    color: $fill-color-hover;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $fill-color-hover;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  &:hover:after,
+  &.focus:after {
+    transform: scaleX(1);
+  }
+}
+

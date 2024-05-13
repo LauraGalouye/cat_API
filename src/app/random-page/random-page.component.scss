@@ -1,0 +1,27 @@
+@import '../app.component.scss';
+
+
+.random-page{
+    color: $color-black;
+    width: 100%;
+    height: auto;
+
+}
+
+app-cat-card{
+
+  
+
+    @include small{
+        width: 80vw;
+       
+    };
+
+    @include medium{
+        width: 45vw;
+    }
+}
+
+
+
+
